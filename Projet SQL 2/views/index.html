@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>Hair Beauty</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <h1> Our Products</h1>
+
+  {% for products in all_products %}
+
+  <div class="movie">
+    <img src="{{ products.image_url }}" />
+    <div class="products-content">
+      <h3><a href="/products/{{ products.id }}">{{ products.name }}</a></h3>
+      <p>{{ products.description }}</p>
+    </div>
+  </div>
+
+  {% endfor %}
+</body>
+
+</html>
